@@ -395,3 +395,15 @@ body { padding-bottom: 56px; }
 @media (min-width: 860px) {
   .nav-full { display: inline; }
 }
+
+/* PREVIEW: remove when the site goes live */
+.preview-bar {
+  background: #171717;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 8px 16px;
+  border-bottom: 3px solid var(--copper);
+}
