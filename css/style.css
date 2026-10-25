@@ -59,8 +59,10 @@ h1, h2, h3 {
 }
 
 .wordmark {
-  display: inline-block;
-  padding: 16px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 0;
   text-decoration: none;
   font-weight: 800;
   font-stretch: 80%;
@@ -70,6 +72,10 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 .wordmark b { color: var(--copper); font-weight: 800; }
+.wordmark img { width: auto; height: 34px; }
+@media (min-width: 860px) {
+  .wordmark img { height: 40px; }
+}
 
 .nav {
   display: flex;
