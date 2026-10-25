@@ -1,81 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us | Fortune Serv</title>
-  <meta name="description" content="Contact Fortune Serv for a moving quote or vehicle recovery.">
-  <link rel="icon" href="images/fortune-serv-logo.jpg">
+  <title>Contact | Fortune Serv</title>
+  <meta name="description" content="Contact Fortune Serv on 07427 288810 or send an enquiry for a removals quote or vehicle recovery.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">Fortune <span>Serv</span></a>
-      <nav class="nav">
+  <header class="header">
+    <div class="wrap">
+      <a class="wordmark" href="index.html">Fortune <b>Serv</b></a>
+      <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="movers.html">Movers</a>
-        <a href="recovery.html">Recovery</a>
+        <a href="movers.html"><span class="nav-full">Fortune </span>Movers</a>
+        <a href="recovery.html"><span class="nav-full">Fortune </span>Recovery</a>
         <a href="contact.html" aria-current="page">Contact</a>
       </nav>
+      <a class="btn header-call" href="tel:+447427288810">Call 07427 288810</a>
     </div>
   </header>
 
-  <main class="container">
-    <section class="page-head">
-      <span class="eyebrow">Fortune Serv</span>
-      <h1>Contact Us</h1>
-      <p>Call us directly, or send an enquiry and we'll get back to you.</p>
+  <main>
+    <section class="hero hero-plain">
+      <div class="wrap">
+        <p class="crumbs"><a href="index.html">Home</a> / Contact</p>
+        <h1>Contact us</h1>
+        <p class="lede">Call us, or send an enquiry and we'll get back to you.</p>
+      </div>
     </section>
 
-    <div class="contact-grid">
-      <div class="card">
-        <h2>Call us</h2>
-        <a class="phone" href="tel:+447427288810">07427 288810</a>
-        <p>For breakdowns and urgent recovery, please call rather than using the form.</p>
-      </div>
+    <section class="section">
+      <div class="wrap contact">
+        <div>
+          <dl class="contact-details">
+            <dt>Phone</dt>
+            <dd><a href="tel:+447427288810">07427 288810</a></dd>
+            <dt>Services</dt>
+            <dd>Removals and vehicle recovery</dd>
+          </dl>
+          <p class="contact-note">Broken down? Please call rather than using the form so we can get to you quickly.</p>
+        </div>
 
-      <div class="card">
-        <h2>Enquiry form</h2>
         <!-- Replace YOUR_FORM_ID with your Formspree form ID (see README.md) -->
         <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="field">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
+          <input type="hidden" name="_subject" value="New enquiry from the Fortune Serv website">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+            </div>
           </div>
           <div class="field">
             <label for="email">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required>
           </div>
           <div class="field">
-            <label for="phone">Phone number</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
+            <label for="message">Message <span>(what you need, where, and when)</span></label>
             <textarea id="message" name="message" required></textarea>
           </div>
           <button class="btn" type="submit">Send enquiry</button>
         </form>
       </div>
-    </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <span>&copy; Fortune Serv</span>
-      <span>Call us: <a href="tel:+447427288810">07427 288810</a></span>
+  <footer class="footer">
+    <div class="wrap">
+      <div>
+        <h4>Fortune Serv</h4>
+        <p>Removals and vehicle recovery.</p>
+        <p><a href="tel:+447427288810">07427 288810</a></p>
+      </div>
+      <div>
+        <h4>Fortune Movers</h4>
+        <ul>
+          <li><a href="home-moves.html">Home moves</a></li>
+          <li><a href="student-moves.html">Student moves</a></li>
+          <li><a href="commercial-moves.html">Commercial moves</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fortune Recovery</h4>
+        <ul>
+          <li><a href="recovery.html">Breakdown recovery</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+      <p class="legal">&copy; 2026 Fortune Serv</p>
     </div>
   </footer>
 
+  <a class="callbar" href="tel:+447427288810">Call 07427 288810</a>
   <script>
-    // Pre-fill the message when arriving from a "Get a quote" button
-    const service = new URLSearchParams(location.search).get("service");
+    // Pre-fill the message when arriving from a "Request a quote" button
+    var service = new URLSearchParams(location.search).get("service");
     if (service) {
-      document.getElementById("message").value = "I'd like a quote for: " + service + "\n\n";
+      document.getElementById("message").value = "Quote request: " + service + "\n\n";
     }
   </script>
 </body>

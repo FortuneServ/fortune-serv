@@ -16,6 +16,6 @@ GitHub Pages can't process forms itself, so the form uses Formspree (free tier):
 3. In `contact.html`, replace `YOUR_FORM_ID` with it, then commit and push.
 
 ## Adding service photos
-Put the photo in `images/`, then in the service page replace
-`<div class="service-img">Photo coming soon</div>` with
-`<img class="service-img" src="images/your-photo.jpg" alt="Describe the photo">`.
+Put the photo in `images/`, then on the service page find the comment under the service
+(`<!-- To add a photo: ... -->`) and replace it with
+`<img class="service-photo" src="images/your-photo.jpg" alt="Describe the photo">`.
