@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Fortune Serv</title>
+  <meta name="description" content="Contact Fortune Serv for a moving quote or vehicle recovery.">
+  <link rel="icon" href="images/fortune-serv-logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Fortune <span>Serv</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="movers.html">Movers</a>
+        <a href="recovery.html">Recovery</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-head">
+      <span class="eyebrow">Fortune Serv</span>
+      <h1>Contact Us</h1>
+      <p>Call us directly, or send an enquiry and we'll get back to you.</p>
+    </section>
+
+    <div class="contact-grid">
+      <div class="card">
+        <h2>Call us</h2>
+        <a class="phone" href="tel:+447427288810">07427 288810</a>
+        <p>For breakdowns and urgent recovery, please call rather than using the form.</p>
+      </div>
+
+      <div class="card">
+        <h2>Enquiry form</h2>
+        <!-- Replace YOUR_FORM_ID with your Formspree form ID (see README.md) -->
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button class="btn" type="submit">Send enquiry</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; Fortune Serv</span>
+      <span>Call us: <a href="tel:+447427288810">07427 288810</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // Pre-fill the message when arriving from a "Get a quote" button
+    const service = new URLSearchParams(location.search).get("service");
+    if (service) {
+      document.getElementById("message").value = "I'd like a quote for: " + service + "\n\n";
+    }
+  </script>
+</body>
+</html>
